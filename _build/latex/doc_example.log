@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.9.3)  4 SEP 2026 09:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.9.3)  4 SEP 2026 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1559,22 +1559,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Chapter 2.
 [3
 
-]
-Chapter 3.
-(doc_example.ind) [4
+] (doc_example.ind)
 
-] (doc_example.aux)
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 31.41pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.41pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-19.41pt}.
+
+[4] (doc_example.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026/08/11>
  ***********
 Package rerunfilecheck Info: File `doc_example.out' has not changed.
-(rerunfilecheck)             Checksum: C5D3CF233F7163958182775B18C4A953;1065.
+(rerunfilecheck)             Checksum: 6491C2D2CC741E4F3730DCC3DADAD368;814.
  ) 
 Here is how much of TeX's memory you used:
  24307 strings out of 402987
- 497023 string characters out of 5448525
- 956513 words of memory out of 5000000
+ 496944 string characters out of 5448525
+ 959194 words of memory out of 5000000
  52606 multiletter control sequences out of 15000+600000
  631846 words of font info for 104 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191

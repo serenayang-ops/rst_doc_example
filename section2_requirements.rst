@@ -1,8 +1,8 @@
 
-Equipment and Bidder Requirements
+Dummy chapter title 
 =====================================
 
-Equipment Requirements
+Dummy section title 
 ------------------------------
 
 * Equipment provided by the bidder shall meet the requirements of the bidding documents, including detailed requirements not fully described in the bidding documents but necessary to ensure normal and effective operation of the equipment, and shall provide new, advanced, and high-quality equipment.
@@ -11,9 +11,8 @@ Equipment Requirements
 * Delivery time: After the contract is signed, Party B shall transport the equipment to the domestic port designated by Party A (tentatively Shanghai Port) within the agreed time after receiving Party A's delivery notice.
 * The bidder shall provide a detailed after-sales service plan in the bid documents, which includes but is not limited to the following: Installation guidance and commissioning responsibility: Tentatively, the requesting party sends personnel to the factory for training, and the requesting party completes it. Trial operation and handover for use: Tentatively, the requesting party sends personnel to the factory for training, and the requesting party completes it.
 
-
-2. Basic Technical Conditions Equipment Must Satisfy
-=====================================================
+Dummy section title 
+----------------------------------------------------
 
 * The software and hardware products of diesel generator sets provided by the bidder must be mature products (the products provided must be mature products with more than 5 years of history), and provide more than 2 commercial cases of similar scale that have been successfully implemented and operated in the past 3 years.
 * When the bidder or equipment manufacturer designs, manufactures, assembles, inspects, and commissions the equipment and materials required by this document, the local climate conditions of Royse City, Texas, USA shall be considered. The bidder shall ensure that the supplied equipment and materials operate reliably under local climate conditions. 
