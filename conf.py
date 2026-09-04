@@ -82,18 +82,30 @@ latex_elements = {
         \definecolor{GigaLightGray}{RGB}{245, 246, 248}  
 
         % -----------------------------------------------------------------
-        % 页眉页脚修复 (直接引用 logo.pdf)
+        % 页眉页脚修复 (强制覆盖 normal 和 plain 样式，确保每一页都有 Logo)
         % -----------------------------------------------------------------
         \usepackage{fancyhdr}
-        \pagestyle{fancy}
-        \fancyhf{}
         
-        \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
-        \fancyhead[R]{\small\color{GigaGray}\leftmark}
+        \fancypagestyle{normal}{
+            \fancyhf{}
+            \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
+            \fancyhead[R]{\small\color{GigaGray}\leftmark}
+            \renewcommand{\headrulewidth}{0.8pt}
+            \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
+            \fancyfoot[C]{\color{GigaDark}\thepage}
+        }
         
-        \renewcommand{\headrulewidth}{0.8pt}
-        \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
-        \fancyfoot[C]{\color{GigaDark}\thepage}
+        \fancypagestyle{plain}{
+            \fancyhf{}
+            \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
+            \fancyhead[R]{\small\color{GigaGray}\leftmark}
+            \renewcommand{\headrulewidth}{0.8pt}
+            \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
+            \fancyfoot[C]{\color{GigaDark}\thepage}
+        }
+        
+        % 默认应用 normal 样式
+        \pagestyle{normal}
 
         % -----------------------------------------------------------------
         % 修复报错：重写一级标题，使用稳定的 colorbox 替代 TikZ node
@@ -136,6 +148,14 @@ latex_elements = {
 
 # 静态资源拷贝：确保将根目录下 figs/ 中的 logo.pdf 拷贝到编译目录
 latex_additional_files = ['figs/logo.pdf']
+
+# -----------------------------------------------------------------
+# 声明附录文件：告诉 Sphinx 将这两个文件作为 PDF 的附录 (Appendix A, B)
+# -----------------------------------------------------------------
+latex_appendices = [
+    'revision_history',
+    'terms',
+]
 
 latex_documents = [
     (

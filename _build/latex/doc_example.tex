@@ -92,18 +92,30 @@
         \definecolor{GigaLightGray}{RGB}{245, 246, 248}  
 
         % -----------------------------------------------------------------
-        % 页眉页脚修复 (直接引用 logo.pdf)
+        % 页眉页脚修复 (强制覆盖 normal 和 plain 样式，确保每一页都有 Logo)
         % -----------------------------------------------------------------
         \usepackage{fancyhdr}
-        \pagestyle{fancy}
-        \fancyhf{}
         
-        \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
-        \fancyhead[R]{\small\color{GigaGray}\leftmark}
+        \fancypagestyle{normal}{
+            \fancyhf{}
+            \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
+            \fancyhead[R]{\small\color{GigaGray}\leftmark}
+            \renewcommand{\headrulewidth}{0.8pt}
+            \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
+            \fancyfoot[C]{\color{GigaDark}\thepage}
+        }
         
-        \renewcommand{\headrulewidth}{0.8pt}
-        \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
-        \fancyfoot[C]{\color{GigaDark}\thepage}
+        \fancypagestyle{plain}{
+            \fancyhf{}
+            \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
+            \fancyhead[R]{\small\color{GigaGray}\leftmark}
+            \renewcommand{\headrulewidth}{0.8pt}
+            \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
+            \fancyfoot[C]{\color{GigaDark}\thepage}
+        }
+        
+        % 默认应用 normal 样式
+        \pagestyle{normal}
 
         % -----------------------------------------------------------------
         % 修复报错：重写一级标题，使用稳定的 colorbox 替代 TikZ node
@@ -244,8 +256,8 @@ All information provided by the Bidder shall be in Chinese. The Bidder shall be 
 \chapter{Dummy chapter title}
 \label{\detokenize{section2_requirements:dummy-chapter-title}}\label{\detokenize{section2_requirements::doc}}
 
-\section{Dummy chapter title}
-\label{\detokenize{section2_requirements:id1}}\begin{itemize}
+\section{Dummy section title}
+\label{\detokenize{section2_requirements:dummy-section-title}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 Equipment provided by the bidder shall meet the requirements of the bidding documents, including detailed requirements not fully described in the bidding documents but necessary to ensure normal and effective operation of the equipment, and shall provide new, advanced, and high\sphinxhyphen{}quality equipment.
@@ -269,8 +281,8 @@ The bidder shall provide a detailed after\sphinxhyphen{}sales service plan in th
 \end{itemize}
 
 
-\section{Dummy chapter title}
-\label{\detokenize{section2_requirements:id2}}\begin{itemize}
+\section{Dummy section title}
+\label{\detokenize{section2_requirements:id1}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 The software and hardware products of diesel generator sets provided by the bidder must be mature products (the products provided must be mature products with more than 5 years of history), and provide more than 2 commercial cases of similar scale that have been successfully implemented and operated in the past 3 years.
@@ -306,6 +318,108 @@ The successful bidder shall provide detailed design for diesel generator install
 \end{itemize}
 
 \appendix
+\phantomsection\label{\detokenize{revision_history::doc}}
+
+\chapter{Revision History}
+\label{\detokenize{revision_history:revision-history}}
+
+\begin{savenotes}\sphinxattablestart
+\sphinxthistablewithglobalstyle
+\centering
+\sphinxcapstartof{table}
+\sphinxthecaptionisattop
+\sphinxcaption{Revision History}\label{\detokenize{revision_history:id1}}
+\sphinxaftertopcaption
+\begin{tabular}[t]{\X{15}{100}\X{15}{100}\X{20}{100}\X{50}{100}}
+\sphinxtoprule
+\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxstyletheadfamily \sphinxAtStartPar
+Date
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxstyletheadfamily \sphinxAtStartPar
+Version
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxstyletheadfamily \sphinxAtStartPar
+Author
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxstyletheadfamily \sphinxAtStartPar
+Description of Changes
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+\\
+\sphinxmidrule
+\sphinxtableatstartofbodyhook\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxAtStartPar
+2026\sphinxhyphen{}06\sphinxhyphen{}01
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxAtStartPar
+V1.0
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxAtStartPar
+GIGA Documentation Group
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{4}}
+\sphinxAtStartPar
+Initial official release.
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+\\
+\sphinxbottomrule
+\end{tabular}
+\sphinxtableafterendhook\par
+\sphinxattableend\end{savenotes}
+\phantomsection\label{\detokenize{terms::doc}}
+
+\chapter{Glossary}
+\label{\detokenize{terms:glossary}}
+
+\begin{savenotes}\sphinxattablestart
+\sphinxthistablewithglobalstyle
+\centering
+\sphinxcapstartof{table}
+\sphinxthecaptionisattop
+\sphinxcaption{Glossary}\label{\detokenize{terms:id1}}
+\sphinxaftertopcaption
+\begin{tabular}[t]{\X{40}{100}\X{60}{100}}
+\sphinxtoprule
+\begin{varwidth}[t]{\sphinxcolwidth{1}{2}}
+\sphinxstyletheadfamily \sphinxAtStartPar
+x
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{2}}
+\sphinxstyletheadfamily \sphinxAtStartPar
+y
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+\\
+\sphinxmidrule
+\sphinxtableatstartofbodyhook\begin{varwidth}[t]{\sphinxcolwidth{1}{2}}
+\sphinxAtStartPar
+a
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+&\begin{varwidth}[t]{\sphinxcolwidth{1}{2}}
+\sphinxAtStartPar
+b
+\sphinxbeforeendvarwidth
+\end{varwidth}%
+\\
+\sphinxbottomrule
+\end{tabular}
+\sphinxtableafterendhook\par
+\sphinxattableend\end{savenotes}
 
 
 

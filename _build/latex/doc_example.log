@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.9.3)  4 SEP 2026 10:12
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.9.3)  4 SEP 2026 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1335,7 +1335,7 @@ Package fontspec Info:
 (C:\Users\seren\AppData\Local\Programs\MiKTeX\tex/latex/ctex/config\ctex.cfg
 File: ctex-scheme.cfg 2026/08/11 v2.6.5 Configuration file (CTEX)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 138.
+Package hyperref Info: Option `colorlinks' set `true' on input line 150.
 \@indexfile=\write4
 \openout4 = `doc_example.idx'.
 
@@ -1344,26 +1344,26 @@ Writing index file doc_example.idx
 (doc_example.aux)
 \openout1 = `doc_example.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1371,64 +1371,64 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 150.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 150.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 150.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 150.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 150.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 150.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 150.
-LaTeX Font Info:    Redeclaring math accent \check on input line 150.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 150.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 150.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 150.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 150.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 162.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 162.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 162.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 162.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 162.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 162.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 162.
+LaTeX Font Info:    Redeclaring math accent \check on input line 162.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 162.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 162.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 162.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 162.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 150.
+(Font)              `operators' in the math version `normal' on input line 162.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/FreeSerif(0)/m/n on input line 150.
+(Font)                  OT1/cmr/m/n --> TU/FreeSerif(0)/m/n on input line 162.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 150.
+(Font)              `operators' in the math version `bold' on input line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FreeSerif(0)/m/n on input line 150.
+(Font)                  OT1/cmr/bx/n --> TU/FreeSerif(0)/m/n on input line 162.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/FreeSerif(0)/m/n --> TU/FreeSerif(0)/m/n on input li
-ne 150.
+ne 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/FreeSerif(0)/m/it on input line 150
+(Font)                  OT1/cmr/m/it --> TU/FreeSerif(0)/m/it on input line 162
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/FreeSerif(0)/b/n on input line 150.
+(Font)                  OT1/cmr/bx/n --> TU/FreeSerif(0)/b/n on input line 162.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/FreeSans(0)/m/n on input line 150.
+(Font)                  OT1/cmss/m/n --> TU/FreeSans(0)/m/n on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/m/n on input line 150.
+(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/m/n on input line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/FreeSerif(0)/m/n --> TU/FreeSerif(0)/b/n on input li
-ne 150.
+ne 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/FreeSerif(0)/b/it on input line 15
-0.
+(Font)                  OT1/cmr/bx/it --> TU/FreeSerif(0)/b/it on input line 16
+2.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/FreeSans(0)/b/n on input line 150.
+(Font)                  OT1/cmss/bx/n --> TU/FreeSans(0)/b/n on input line 162.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/b/n on input line 150.
+(Font)                  OT1/cmtt/m/n --> TU/FreeMono(0)/b/n on input line 162.
 
 (C:\Users\seren\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome7\fontawesom
 e7.sty
@@ -1488,20 +1488,20 @@ ome7brands.fd)))
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 150.
+Package hyperref Info: Link coloring ON on input line 162.
 (doc_example.out) (doc_example.out)
 \@outlinefile=\write5
 \openout5 = `doc_example.out'.
 
 File: logo.pdf Graphic file (type pdf)
 <use logo.pdf>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 172
+LaTeX Font Info:    Trying to load font information for U+msa on input line 184
 .
 
 (C:\Users\seren\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 172
+LaTeX Font Info:    Trying to load font information for U+msb on input line 184
 .
 
 (C:\Users\seren\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1513,6 +1513,70 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write6
 \openout6 = `doc_example.toc'.
 
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.64911pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.64911pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-15.64911pt}.
+
+[1
+
+
+]
+Chapter 1.
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.64911pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.64911pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-15.64911pt}.
+
+[1
+
+
+]
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.64911pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.64911pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-15.64911pt}.
+
+[2]
+Chapter 2.
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.64911pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.64911pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-15.64911pt}.
+
+[3
+
+]
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.64911pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.64911pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-15.64911pt}.
+
+[4]
+Appendix A.
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "Microsoft YaHei Bold/I" (it
@@ -1539,49 +1603,51 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Microsoft
 (fontspec)             YaHei/BI/OT:script=hani;language=dflt;"
 
- [1
 
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
+[]\TU/FreeSerif(0)/m/n/10 GIGA Documenta-
+ []
 
-]
-Chapter 1.
-[1
-
-
-]
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 31.41pt, for example:
-(fancyhdr)                \setlength{\headheight}{31.41pt}.
+(fancyhdr)                Make it at least 27.64911pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.64911pt}.
 (fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-19.41pt}.
+(fancyhdr)                \addtolength{\topmargin}{-15.64911pt}.
 
-[2]
-Chapter 2.
-[3
+[5
 
-] (doc_example.ind)
+]
+Appendix B.
+No file doc_example.ind.
+File: logo.pdf Graphic file (type pdf)
+<use logo.pdf>
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 31.41pt, for example:
-(fancyhdr)                \setlength{\headheight}{31.41pt}.
+(fancyhdr)                Make it at least 27.64911pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.64911pt}.
 (fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-19.41pt}.
+(fancyhdr)                \addtolength{\topmargin}{-15.64911pt}.
 
-[4] (doc_example.aux)
+[6
+
+] (doc_example.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026/08/11>
  ***********
 Package rerunfilecheck Info: File `doc_example.out' has not changed.
-(rerunfilecheck)             Checksum: 6491C2D2CC741E4F3730DCC3DADAD368;814.
+(rerunfilecheck)             Checksum: FDC78683EEB49196F75D1FE2B38573C0;1025.
  ) 
 Here is how much of TeX's memory you used:
- 24307 strings out of 402987
- 496944 string characters out of 5448525
- 959194 words of memory out of 5000000
- 52606 multiletter control sequences out of 15000+600000
+ 24316 strings out of 402987
+ 497171 string characters out of 5448525
+ 959735 words of memory out of 5000000
+ 52618 multiletter control sequences out of 15000+600000
  631846 words of font info for 104 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
- 74i,12n,115p,1202b,694s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,16n,111p,1202b,637s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on doc_example.pdf (6 pages).
+Output written on doc_example.pdf (8 pages).
