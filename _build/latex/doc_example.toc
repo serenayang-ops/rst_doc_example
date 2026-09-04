@@ -1,0 +1,7 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}General Provisions}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Dummy title}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Dummy title}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Equipment and Bidder Requirements}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Equipment Requirements}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}2. Basic Technical Conditions Equipment Must Satisfy}{4}{chapter.3}%
