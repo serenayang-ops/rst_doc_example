@@ -12,6 +12,17 @@ General Provisions
 #. Equipment shall be supplied as a complete set, assembled as a whole by the same manufacturer, and OEM production is not accepted. The unit shall be completely assembled by the manufacturer and transported intact to the site.
 #. All information provided by the Bidder shall be in Chinese. The Bidder shall be responsible for any losses caused by language errors. All products inside and outside the Diesel generator container shall have English labels and LOGO; no Chinese labels shall be used.
 
+.. _fig_example1:
+
+.. figure:: figs/logo.pdf
+   :scale: 50 %
+
+   This is the caption of the figure
+
+Refer to :numref:`fig_example1`.
+
+
+
 
 Dummy title
 -------------

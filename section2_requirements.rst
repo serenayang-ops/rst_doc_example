@@ -11,6 +11,8 @@ Dummy section title
 * Delivery time: After the contract is signed, Party B shall transport the equipment to the domestic port designated by Party A (tentatively Shanghai Port) within the agreed time after receiving Party A's delivery notice.
 * The bidder shall provide a detailed after-sales service plan in the bid documents, which includes but is not limited to the following: Installation guidance and commissioning responsibility: Tentatively, the requesting party sends personnel to the factory for training, and the requesting party completes it. Trial operation and handover for use: Tentatively, the requesting party sends personnel to the factory for training, and the requesting party completes it.
 
+
+
 Dummy section title 
 ----------------------------------------------------
 

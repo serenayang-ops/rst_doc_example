@@ -21,7 +21,11 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-language = 'zh_CN'
+
+# =========================================================
+# [修改] 强制 Sphinx 使用英文输出
+# =========================================================
+language = 'en'
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
@@ -64,12 +68,22 @@ latex_elements = {
         \clearpage
     ''',
 
-    # 2. 导言区修复
+    # 2. 导言区修复 
     'preamble': r'''
-        \usepackage{ctex}
+        % =========================================================
+        % [修改] 增加 scheme=plain 参数，防止 ctex 将 Figure 翻译成"图"
+        % =========================================================
+        \usepackage[scheme=plain]{ctex}
         \usepackage{geometry}
         \geometry{top=2.5cm, bottom=2.2cm, left=2.2cm, right=2.2cm}
         
+        % =========================================================
+        % 1. 字体设置：使用 IBM Plex Sans 作为西文字体
+        % =========================================================
+        \usepackage{fontspec}
+        \setmainfont{IBM Plex Sans}
+        \setsansfont{IBM Plex Sans}
+
         \usepackage{graphicx}
         \usepackage{xcolor}
         \usepackage{colortbl}
@@ -80,6 +94,29 @@ latex_elements = {
         \definecolor{GigaDark}{RGB}{33, 37, 41}          
         \definecolor{GigaGray}{RGB}{108, 117, 125}       
         \definecolor{GigaLightGray}{RGB}{245, 246, 248}  
+
+        % =========================================================
+        % 修复页眉高度不足的警告
+        % =========================================================
+        \setlength{\headheight}{28pt}
+        \addtolength{\topmargin}{-16pt}
+
+        % =========================================================
+        % 修复特殊符号 (★ 和 ▲) 缺失导致的字体报错
+        % 强制将这两个符号交给中文字体处理
+        % =========================================================
+        \xeCJKDeclareCharClass{CJK}{"2605, "25B2}
+
+        % =========================================================
+        % 2. 表格全局样式：首行 GIGA蓝色背景，白色字体
+        % =========================================================
+        % 修改表头的字体样式为：加粗 + 白色
+        \renewcommand{\sphinxstyletheadfamily}{\bfseries\color{white}}
+        
+        % 拦截 Sphinx 默认的表格顶线命令，在画完线后立即给下一行(首行)填充背景色
+        \let\oldsphinxtoprule\sphinxtoprule
+        \renewcommand{\sphinxtoprule}{\oldsphinxtoprule\rowcolor{GigaBlue}}
+        % =========================================================
 
         % -----------------------------------------------------------------
         % 页眉页脚修复 (强制覆盖 normal 和 plain 样式，确保每一页都有 Logo)
@@ -108,7 +145,7 @@ latex_elements = {
         \pagestyle{normal}
 
         % -----------------------------------------------------------------
-        % 修复报错：重写一级标题，使用稳定的 colorbox 替代 TikZ node
+        % 重写一级标题，使用稳定的 colorbox 替代 TikZ node
         % -----------------------------------------------------------------
         \usepackage{titlesec}
         \titleformat{\chapter}[hang]
@@ -151,6 +188,7 @@ latex_additional_files = ['figs/logo.pdf']
 
 # -----------------------------------------------------------------
 # 声明附录文件：告诉 Sphinx 将这两个文件作为 PDF 的附录 (Appendix A, B)
+# 注意：这需要你的 revision_history.rst 和 terms.rst 顶部有 :orphan: 以及一级标题
 # -----------------------------------------------------------------
 latex_appendices = [
     'revision_history',

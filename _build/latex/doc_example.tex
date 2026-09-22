@@ -24,9 +24,11 @@
 
 \catcode`^^^^00a0\active\protected\def^^^^00a0{\leavevmode\nobreak\ }
 \usepackage{cmap}
-\usepackage{xeCJK}
+\usepackage{fontspec}
+\defaultfontfeatures[\rmfamily,\sffamily,\ttfamily]{}
 \usepackage{amsmath,amssymb,amstext}
-\usepackage{babel}
+\usepackage{polyglossia}
+\setmainlanguage{english}
 
 
 
@@ -54,12 +56,10 @@
 
 
 
-\usepackage[Sonny]{fncychap}
-\ChNameVar{\Large\normalfont\sffamily}
-\ChTitleVar{\Large\normalfont\sffamily}
+\usepackage[Bjarne]{fncychap}
 \usepackage{sphinx}
 
-\fvset{fontsize=\small,formatcom=\xeCJKVerbAddon}
+\fvset{fontsize=auto}
 \usepackage{geometry}
 
 
@@ -76,10 +76,20 @@
 \setcounter{tocdepth}{1}
 
 
-        \usepackage{ctex}
+        % =========================================================
+        % [修改] 增加 scheme=plain 参数，防止 ctex 将 Figure 翻译成"图"
+        % =========================================================
+        \usepackage[scheme=plain]{ctex}
         \usepackage{geometry}
         \geometry{top=2.5cm, bottom=2.2cm, left=2.2cm, right=2.2cm}
         
+        % =========================================================
+        % 1. 字体设置：使用 IBM Plex Sans 作为西文字体
+        % =========================================================
+        \usepackage{fontspec}
+        \setmainfont{IBM Plex Sans}
+        \setsansfont{IBM Plex Sans}
+
         \usepackage{graphicx}
         \usepackage{xcolor}
         \usepackage{colortbl}
@@ -90,6 +100,29 @@
         \definecolor{GigaDark}{RGB}{33, 37, 41}          
         \definecolor{GigaGray}{RGB}{108, 117, 125}       
         \definecolor{GigaLightGray}{RGB}{245, 246, 248}  
+
+        % =========================================================
+        % 修复页眉高度不足的警告
+        % =========================================================
+        \setlength{\headheight}{28pt}
+        \addtolength{\topmargin}{-16pt}
+
+        % =========================================================
+        % 修复特殊符号 (★ 和 ▲) 缺失导致的字体报错
+        % 强制将这两个符号交给中文字体处理
+        % =========================================================
+        \xeCJKDeclareCharClass{CJK}{"2605, "25B2}
+
+        % =========================================================
+        % 2. 表格全局样式：首行 GIGA蓝色背景，白色字体
+        % =========================================================
+        % 修改表头的字体样式为：加粗 + 白色
+        \renewcommand{\sphinxstyletheadfamily}{\bfseries\color{white}}
+        
+        % 拦截 Sphinx 默认的表格顶线命令，在画完线后立即给下一行(首行)填充背景色
+        \let\oldsphinxtoprule\sphinxtoprule
+        \renewcommand{\sphinxtoprule}{\oldsphinxtoprule\rowcolor{GigaBlue}}
+        % =========================================================
 
         % -----------------------------------------------------------------
         % 页眉页脚修复 (强制覆盖 normal 和 plain 样式，确保每一页都有 Logo)
@@ -118,7 +151,7 @@
         \pagestyle{normal}
 
         % -----------------------------------------------------------------
-        % 修复报错：重写一级标题，使用稳定的 colorbox 替代 TikZ node
+        % 重写一级标题，使用稳定的 colorbox 替代 TikZ node
         % -----------------------------------------------------------------
         \usepackage{titlesec}
         \titleformat{\chapter}[hang]
@@ -153,18 +186,13 @@
     
 
 \title{Technical Specification Of\\Containerized Diesel Generator DCP3000kW}
-\date{2026 年 09 月 04 日}
+\date{Sep 22, 2026}
 \release{1.0}
 \author{SerenaYang}
 \newcommand{\sphinxlogo}{\vbox{}}
-\renewcommand{\releasename}{发行版本}
+\renewcommand{\releasename}{Release}
 \makeindex
 \begin{document}
-
-\ifdefined\shorthandoff
-  \ifnum\catcode`\=\string=\active\shorthandoff{=}\fi
-  \ifnum\catcode`\"=\active\shorthandoff{"}\fi
-\fi
 
 \pagestyle{empty}
 
@@ -244,6 +272,16 @@ All information provided by the Bidder shall be in Chinese. The Bidder shall be 
 
 \end{enumerate}
 
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[scale=0.5]{{logo}.pdf}
+\caption{This is the caption of the figure}\label{\detokenize{section1_general:id2}}\label{\detokenize{section1_general:fig-example1}}\end{figure}
+
+\sphinxAtStartPar
+Refer to \sphinxcode{\sphinxupquote{fig\_example1}}.
+
 
 \section{Dummy title}
 \label{\detokenize{section1_general:dummy-title}}
@@ -264,7 +302,7 @@ Equipment provided by the bidder shall meet the requirements of the bidding docu
 
 \item {} 
 \sphinxAtStartPar
-The bidder shall be responsible for patents involved in the bid content and shall protect the tenderer's interests from any infringement. All legal rulings, litigation, and expenses arising from text, trademark, and technical patent infringement shall have no relation to the tenderer.
+The bidder shall be responsible for patents involved in the bid content and shall protect the tenderer’s interests from any infringement. All legal rulings, litigation, and expenses arising from text, trademark, and technical patent infringement shall have no relation to the tenderer.
 
 \item {} 
 \sphinxAtStartPar
@@ -272,7 +310,7 @@ Markings: Each equipment shall have a nameplate, and the content of the nameplat
 
 \item {} 
 \sphinxAtStartPar
-Delivery time: After the contract is signed, Party B shall transport the equipment to the domestic port designated by Party A (tentatively Shanghai Port) within the agreed time after receiving Party A's delivery notice.
+Delivery time: After the contract is signed, Party B shall transport the equipment to the domestic port designated by Party A (tentatively Shanghai Port) within the agreed time after receiving Party A’s delivery notice.
 
 \item {} 
 \sphinxAtStartPar
@@ -423,6 +461,6 @@ b
 
 
 
-\renewcommand{\indexname}{索引}
+\renewcommand{\indexname}{Index}
 \printindex
 \end{document}
