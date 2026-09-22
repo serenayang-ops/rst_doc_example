@@ -1,3 +1,4 @@
 # 忽略 Sphinx 编译生成的静态文件
 _build/
 build/
+/_build

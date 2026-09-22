@@ -27,6 +27,11 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # =========================================================
 language = 'en'
 
+# =========================================================
+# [新增] 开启图表、表格、代码块的自动编号及引用，使 :numref: 生效
+# =========================================================
+numfig = True
+
 html_theme = 'alabaster'
 html_static_path = ['_static']
 
@@ -71,14 +76,14 @@ latex_elements = {
     # 2. 导言区修复 
     'preamble': r'''
         % =========================================================
-        % [修改] 增加 scheme=plain 参数，防止 ctex 将 Figure 翻译成"图"
+        % 增加 scheme=plain 参数，防止 ctex 将 Figure 翻译成"图"
         % =========================================================
         \usepackage[scheme=plain]{ctex}
         \usepackage{geometry}
         \geometry{top=2.5cm, bottom=2.2cm, left=2.2cm, right=2.2cm}
         
         % =========================================================
-        % 1. 字体设置：使用 IBM Plex Sans 作为西文字体
+        % 字体设置：使用 IBM Plex Sans 作为西文字体
         % =========================================================
         \usepackage{fontspec}
         \setmainfont{IBM Plex Sans}
@@ -103,17 +108,14 @@ latex_elements = {
 
         % =========================================================
         % 修复特殊符号 (★ 和 ▲) 缺失导致的字体报错
-        % 强制将这两个符号交给中文字体处理
         % =========================================================
         \xeCJKDeclareCharClass{CJK}{"2605, "25B2}
 
         % =========================================================
-        % 2. 表格全局样式：首行 GIGA蓝色背景，白色字体
+        % 表格全局样式：首行 GIGA蓝色背景，白色字体
         % =========================================================
-        % 修改表头的字体样式为：加粗 + 白色
         \renewcommand{\sphinxstyletheadfamily}{\bfseries\color{white}}
         
-        % 拦截 Sphinx 默认的表格顶线命令，在画完线后立即给下一行(首行)填充背景色
         \let\oldsphinxtoprule\sphinxtoprule
         \renewcommand{\sphinxtoprule}{\oldsphinxtoprule\rowcolor{GigaBlue}}
         % =========================================================
@@ -141,7 +143,6 @@ latex_elements = {
             \fancyfoot[C]{\color{GigaDark}\thepage}
         }
         
-        % 默认应用 normal 样式
         \pagestyle{normal}
 
         % -----------------------------------------------------------------
@@ -179,21 +180,11 @@ latex_elements = {
         \renewcommand{\arraystretch}{1.3}
     ''',
 
-    'latex_use_xindy': False,
     'figure_align': 'htbp',
 }
 
 # 静态资源拷贝：确保将根目录下 figs/ 中的 logo.pdf 拷贝到编译目录
 latex_additional_files = ['figs/logo.pdf']
-
-# -----------------------------------------------------------------
-# 声明附录文件：告诉 Sphinx 将这两个文件作为 PDF 的附录 (Appendix A, B)
-# 注意：这需要你的 revision_history.rst 和 terms.rst 顶部有 :orphan: 以及一级标题
-# -----------------------------------------------------------------
-latex_appendices = [
-    'revision_history',
-    'terms',
-]
 
 latex_documents = [
     (
