@@ -178,6 +178,19 @@ latex_elements = {
         % ------------------------------------------------------------------
         \renewcommand{\arraystretch}{1.15}
 
+        % GIGA Engineering table borders
+        % Keep Sphinx's standard table layout, but use GIGA Blue for all rules.
+        \arrayrulecolor{GigaBlue}
+        \setlength{\arrayrulewidth}{0.5pt}
+
+        % GIGA Engineering table header text
+        % Standard table borders remain GIGA Blue; header text is also GIGA Blue.
+        \renewcommand{\sphinxstyletheadfamily}{%
+            \sffamily\bfseries\color{GigaBlue}%
+        }
+
+
+
     ''',
 }
 
@@ -191,9 +204,7 @@ latex_use_latex_multicolumn = True
 
 # Sphinx's LaTeX setup supports these colors for table rows.
 # Keep the values as brand colors rather than introducing gray body fills.
-latex_elements['sphinxsetup'] = (
-    'TitleColor={RGB}{0,81,237}'
-)
+latex_elements['sphinxsetup'] = 'TitleColor={RGB}{0,81,237}'
 
 # ---------------------------------------------------------------------------
 # Other LaTeX settings
