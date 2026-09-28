@@ -56,8 +56,8 @@ latex_elements = {
 
             \centering
             {\Huge \bfseries \color{black} Technical Specification } \\[0.5cm]
-            {\Huge \bfseries \color{black} of Containerized Diesel Generator} \\[0.3cm]
-            {\Huge \bfseries \color{black} DCP3000kW} \\[3cm]
+            {\Huge \bfseries \color{black} of Containerized Diesel Generator} \\[0.5cm]
+            {\Huge \bfseries \color{black} DCP3000kW} \\[0.5cm]
 
             \vfill
 
