@@ -39,6 +39,9 @@ latex_elements = {
     'pointsize': '10pt',
     'extraclassoptions': 'openany,oneside',
     'fncychap': '',
+    
+    # 强制图片不浮动，必须放在 latex_elements 字典内
+    'figure_align': 'H',
 
     # Keep Sphinx's own chapter/section mechanism.
     # Do NOT use titlesec here: it previously caused the PDF body to disappear
@@ -84,7 +87,7 @@ latex_elements = {
         \setmainfont{IBM Plex Sans}
         \setsansfont{IBM Plex Sans}
 
-        % Map missing symbols to Windows default symbol font
+        % Map missing symbols to Windows default symbol font (Fixed corrupted encoding)
         \usepackage{newunicodechar}
         \newfontfamily{\symfont}{Segoe UI Symbol}
         \newunicodechar{★}{{\symfont ★}}
@@ -97,6 +100,7 @@ latex_elements = {
         \usepackage{xcolor}
         \usepackage{array}
         \usepackage{colortbl}
+        \usepackage{float}
 
         % ------------------------------------------------------------------
         % GIGA brand colors
@@ -152,12 +156,9 @@ latex_elements = {
 
         % ------------------------------------------------------------------
         % GIGA Engineering chapter / section appearance
-        %
-        % Keep Sphinx's native chapter/section commands for build stability.
-        % Heading color is controlled by sphinxsetup -> TitleColor below.
-        % This avoids titlesec/fncychap overrides that can interfere with
-        % Sphinx 9.x LaTeX output.
         % ------------------------------------------------------------------
+        \usepackage{sectsty}
+        \chapterfont{\color{GigaBlue}}
 
         % ------------------------------------------------------------------
         % Hyperlinks
@@ -171,32 +172,23 @@ latex_elements = {
 
         % ------------------------------------------------------------------
         % Tables
-        %
-        % Sphinx standard tables provide the visible grid/borders.
-        % The table header is styled separately below.
         % ------------------------------------------------------------------
         \renewcommand{\arraystretch}{1.15}
 
         % GIGA Engineering table borders
-        % Keep Sphinx's standard table layout, but use GIGA Blue for all rules.
         \arrayrulecolor{GigaBlue}
         \setlength{\arrayrulewidth}{0.5pt}
 
         % GIGA Engineering table header text
-        % Standard table borders remain GIGA Blue; header text is also GIGA Blue.
         \renewcommand{\sphinxstyletheadfamily}{%
             \sffamily\bfseries\color{GigaBlue}%
         }
-
-
-
     ''',
 }
 
 # ---------------------------------------------------------------------------
 # Table configuration
 # ---------------------------------------------------------------------------
-#
 # "standard" keeps the complete table grid.
 latex_table_style = ['standard']
 latex_use_latex_multicolumn = True
@@ -208,8 +200,6 @@ latex_elements['sphinxsetup'] = 'TitleColor={RGB}{0,81,237}'
 # ---------------------------------------------------------------------------
 # Other LaTeX settings
 # ---------------------------------------------------------------------------
-
-figure_align = 'htbp'
 
 latex_additional_files = ['figs/logo.pdf']
 
