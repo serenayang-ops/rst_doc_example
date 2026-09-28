@@ -1,5 +1,5 @@
 ===================================================================
-Technical Specification Of Containerized Diesel generator DCP3000kW
+Technical Specification of Containerized Diesel generator DCP3000kW
 ===================================================================
 
 .. toctree::

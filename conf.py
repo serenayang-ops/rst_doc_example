@@ -5,7 +5,7 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'Technical Specification Of Containerized Diesel generator DCP3000kW'
+project = 'Technical Specification of Containerized Diesel generator DCP3000kW'
 copyright = '2026, GIGA'
 author = 'SerenaYang'
 release = '1.0'
@@ -38,6 +38,7 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
     'extraclassoptions': 'openany,oneside',
+    'fncychap': '',
 
     # Keep Sphinx's own chapter/section mechanism.
     # Do NOT use titlesec here: it previously caused the PDF body to disappear
@@ -51,9 +52,9 @@ latex_elements = {
             {\color{GigaBlue}\rule{\textwidth}{3pt}} \\[2.5cm]
 
             \centering
-            {\Huge \bfseries \color{GigaDark} Technical Specification Of} \\[0.5cm]
-            {\Huge \bfseries \color{GigaBlue} Containerized Diesel Generator} \\[0.3cm]
-            {\LARGE \bfseries \color{GigaDark} DCP3000kW} \\[3cm]
+            {\Huge \bfseries \color{black} Technical Specification } \\[0.5cm]
+            {\Huge \bfseries \color{black} of Containerized Diesel Generator} \\[0.3cm]
+            {\Huge \bfseries \color{black} DCP3000kW} \\[3cm]
 
             \vfill
 
@@ -152,12 +153,10 @@ latex_elements = {
         % ------------------------------------------------------------------
         % GIGA Engineering chapter / section appearance
         %
-        % IMPORTANT:
-        % We intentionally do not load titlesec.
-        % Sphinx's native chapter commands remain untouched for stability.
-        %
-        % The Sphinx-generated chapter/section title color is controlled by
-        % sphinxsetup below.
+        % Keep Sphinx's native chapter/section commands for build stability.
+        % Heading color is controlled by sphinxsetup -> TitleColor below.
+        % This avoids titlesec/fncychap overrides that can interfere with
+        % Sphinx 9.x LaTeX output.
         % ------------------------------------------------------------------
 
         % ------------------------------------------------------------------
@@ -218,7 +217,7 @@ latex_documents = [
     (
         'index',
         'doc_example.tex',
-        'Technical Specification Of\\\\Containerized Diesel Generator DCP3000kW',
+        'Technical Specification of\\\\Containerized Diesel Generator DCP3000kW',
         'SerenaYang',
         'manual'
     ),
