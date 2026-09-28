@@ -22,7 +22,16 @@ General Provisions
 Refer to :numref:`fig_example1`.
 
 
+.. list-table:: Outer Table Caption
+   :widths: 50 50
+   :header-rows: 1
 
+   * - Column 1
+     - Column 2
+   * - Outer Row 1, Cell 1
+     - 
+       * Inner Data A
+       * Inner Data B
 
 
 Dummy title

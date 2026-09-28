@@ -3,10 +3,14 @@
 import os
 import sys
 
+# -- Project information -----------------------------------------------------
+
 project = 'Technical Specification Of Containerized Diesel generator DCP3000kW'
 copyright = '2026, GIGA'
 author = 'SerenaYang'
 release = '1.0'
+
+# -- General configuration ---------------------------------------------------
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -22,7 +26,11 @@ language = 'en'
 numfig = True
 
 html_theme = 'alabaster'
-html_static_path = ['_static']
+
+# _static is intentionally disabled because it is not present in the project.
+# html_static_path = ['_static']
+
+# -- Options for LaTeX / PDF output ------------------------------------------
 
 latex_engine = 'xelatex'
 
@@ -31,26 +39,28 @@ latex_elements = {
     'pointsize': '10pt',
     'extraclassoptions': 'openany,oneside',
 
+    # Keep Sphinx's own chapter/section mechanism.
+    # Do NOT use titlesec here: it previously caused the PDF body to disappear
+    # during XeLaTeX compilation.
+
     'maketitle': r'''
         \begin{titlepage}
             \raggedright
             \includegraphics[height=1.8cm]{logo.pdf} \\[0.5cm]
-            
+
             {\color{GigaBlue}\rule{\textwidth}{3pt}} \\[2.5cm]
-            
+
             \centering
             {\Huge \bfseries \color{GigaDark} Technical Specification Of} \\[0.5cm]
             {\Huge \bfseries \color{GigaBlue} Containerized Diesel Generator} \\[0.3cm]
             {\LARGE \bfseries \color{GigaDark} DCP3000kW} \\[3cm]
-            
+
             \vfill
-            
+
             \begin{tabular}{|p{4.5cm}|p{7.5cm}|}
                 \hline
-                \rowcolor{GigaLightGray}
                 \textbf{\color{GigaDark} Product model} & Gen Set \\ \hline
                 \textbf{\color{GigaDark} Version} & 1.0 \\ \hline
-                \rowcolor{GigaLightGray}
                 \textbf{\color{GigaDark} Date} & July 14th, 2026 \\ \hline
                 \textbf{\color{GigaDark} Serial Number} & 1110X \\ \hline
             \end{tabular}
@@ -60,94 +70,145 @@ latex_elements = {
     ''',
 
     'preamble': r'''
-        \usepackage[scheme=plain]{ctex}
+        % ------------------------------------------------------------------
+        % Basic page layout
+        % ------------------------------------------------------------------
         \usepackage{geometry}
         \geometry{top=2.5cm, bottom=2.2cm, left=2.2cm, right=2.2cm}
-        
+
+        % ------------------------------------------------------------------
+        % Fonts
+        % ------------------------------------------------------------------
         \usepackage{fontspec}
         \setmainfont{IBM Plex Sans}
         \setsansfont{IBM Plex Sans}
 
+        % Map missing symbols to Windows default symbol font
+        \usepackage{newunicodechar}
+        \newfontfamily{\symfont}{Segoe UI Symbol}
+        \newunicodechar{★}{{\symfont ★}}
+        \newunicodechar{▲}{{\symfont ▲}}
+
+        % ------------------------------------------------------------------
+        % Packages
+        % ------------------------------------------------------------------
         \usepackage{graphicx}
         \usepackage{xcolor}
-        \usepackage{colortbl}
         \usepackage{array}
+        \usepackage{colortbl}
 
-        \definecolor{GigaBlue}{RGB}{0, 81, 237}          
-        \definecolor{GigaDark}{RGB}{33, 37, 41}          
-        \definecolor{GigaGray}{RGB}{108, 117, 125}       
-        \definecolor{GigaLightGray}{RGB}{245, 246, 248}  
+        % ------------------------------------------------------------------
+        % GIGA brand colors
+        % ------------------------------------------------------------------
+        \definecolor{GigaBlue}{RGB}{0,81,237}
+        \definecolor{GigaDark}{RGB}{33,37,41}
+        \definecolor{GigaGray}{RGB}{108,117,125}
+        \definecolor{GigaLightGray}{RGB}{245,246,248}
 
+        % ------------------------------------------------------------------
+        % Header / footer
+        % ------------------------------------------------------------------
         \setlength{\headheight}{28pt}
         \addtolength{\topmargin}{-16pt}
-        \xeCJKDeclareCharClass{CJK}{"2605, "25B2}
-
-        % =========================================================
-        % 注意：这里已暂时移除引起崩溃的 \rowcolor / \cellcolor 代码
-        % 仅保留对表头文字加粗的处理，确保安全编译
-        % =========================================================
-        \renewcommand{\sphinxstyletheadfamily}{\bfseries}
 
         \usepackage{fancyhdr}
+
         \fancypagestyle{normal}{
             \fancyhf{}
-            \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
-            \fancyhead[R]{\small\color{GigaGray}\leftmark}
-            \renewcommand{\headrulewidth}{0.8pt}
-            \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
+            \fancyhead[L]{%
+                \raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}%
+            }
+            \fancyhead[R]{%
+                \small\color{GigaGray}\leftmark
+            }
+            \renewcommand{\headrulewidth}{0.5pt}
+            \renewcommand{\headrule}{%
+                \hbox to\headwidth{%
+                    \color{GigaBlue}\makebox[\headwidth]{\hrulefill}%
+                }%
+            }
             \fancyfoot[C]{\color{GigaDark}\thepage}
         }
+
         \fancypagestyle{plain}{
             \fancyhf{}
-            \fancyhead[L]{\raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}}
-            \fancyhead[R]{\small\color{GigaGray}\leftmark}
-            \renewcommand{\headrulewidth}{0.8pt}
-            \renewcommand{\headrule}{\hbox to\headwidth{\color{GigaBlue}\makebox[\headwidth]{\hrulefill}}}
+            \fancyhead[L]{%
+                \raisebox{-0.15cm}{\includegraphics[height=0.7cm]{logo.pdf}}%
+            }
+            \fancyhead[R]{%
+                \small\color{GigaGray}\leftmark
+            }
+            \renewcommand{\headrulewidth}{0.5pt}
+            \renewcommand{\headrule}{%
+                \hbox to\headwidth{%
+                    \color{GigaBlue}\makebox[\headwidth]{\hrulefill}%
+                }%
+            }
             \fancyfoot[C]{\color{GigaDark}\thepage}
         }
+
         \pagestyle{normal}
 
-        \usepackage{titlesec}
-        \titleformat{\chapter}[hang]
-            {\normalfont\huge\bfseries\color{GigaBlue}}
-            {\colorbox{GigaBlue}{\color{white}\thechapter}}
-            {1em}
-            {}
-            
-        \titleformat{\section}
-            {\normalfont\large\bfseries\color{GigaBlue}}
-            {\thesection}{0.8em}{}
-            [\color{GigaBlue}\hrule height 0.5pt]
+        % ------------------------------------------------------------------
+        % GIGA Engineering chapter / section appearance
+        %
+        % IMPORTANT:
+        % We intentionally do not load titlesec.
+        % Sphinx's native chapter commands remain untouched for stability.
+        %
+        % The Sphinx-generated chapter/section title color is controlled by
+        % sphinxsetup below.
+        % ------------------------------------------------------------------
 
-        \makeatletter
-        \g@addto@macro\appendix{
-            \titleformat{\chapter}[hang]
-                {\normalfont\huge\bfseries\color{GigaGray}}
-                {\colorbox{GigaGray}{\color{white}Appendix \thechapter}}
-                {1em}
-                {}
-        }
-        \makeatother
-
+        % ------------------------------------------------------------------
+        % Hyperlinks
+        % ------------------------------------------------------------------
         \hypersetup{
             colorlinks=true,
             linkcolor=GigaBlue,
             citecolor=GigaBlue,
             urlcolor=GigaBlue
         }
-        \renewcommand{\arraystretch}{1.3}
+
+        % ------------------------------------------------------------------
+        % Tables
+        %
+        % Sphinx standard tables provide the visible grid/borders.
+        % The table header is styled separately below.
+        % ------------------------------------------------------------------
+        \renewcommand{\arraystretch}{1.15}
+
     ''',
-    'figure_align': 'htbp',
 }
+
+# ---------------------------------------------------------------------------
+# Table configuration
+# ---------------------------------------------------------------------------
+#
+# "standard" keeps the complete table grid.
+latex_table_style = ['standard']
+latex_use_latex_multicolumn = True
+
+# Sphinx's LaTeX setup supports these colors for table rows.
+# Keep the values as brand colors rather than introducing gray body fills.
+latex_elements['sphinxsetup'] = (
+    'TitleColor={RGB}{0,81,237}'
+)
+
+# ---------------------------------------------------------------------------
+# Other LaTeX settings
+# ---------------------------------------------------------------------------
+
+figure_align = 'htbp'
 
 latex_additional_files = ['figs/logo.pdf']
 
 latex_documents = [
     (
-        'index',                 
-        'doc_example.tex',       
-        'Technical Specification Of\\\\Containerized Diesel Generator DCP3000kW', 
-        'SerenaYang',            
-        'manual'                 
+        'index',
+        'doc_example.tex',
+        'Technical Specification Of\\\\Containerized Diesel Generator DCP3000kW',
+        'SerenaYang',
+        'manual'
     ),
 ]
