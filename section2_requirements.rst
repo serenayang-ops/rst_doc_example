@@ -1,8 +1,8 @@
 
-Dummy chapter title 
+Dummy Chapter Title 
 =====================================
 
-Dummy section title 
+Dummy Section Title 
 ------------------------------
 
 * Equipment provided by the bidder shall meet the requirements of the bidding documents, including detailed requirements not fully described in the bidding documents but necessary to ensure normal and effective operation of the equipment, and shall provide new, advanced, and high-quality equipment.
@@ -13,7 +13,7 @@ Dummy section title
 
 
 
-Dummy section title 
+Dummy Section Title 
 ----------------------------------------------------
 
 * The software and hardware products of diesel generator sets provided by the bidder must be mature products (the products provided must be mature products with more than 5 years of history), and provide more than 2 commercial cases of similar scale that have been successfully implemented and operated in the past 3 years.
