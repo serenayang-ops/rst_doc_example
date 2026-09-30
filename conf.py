@@ -55,9 +55,9 @@ latex_elements = {
             {\color{GigaBlue}\rule{\textwidth}{3pt}} \\[2.5cm]
 
             \centering
-            {\Huge \bfseries \color{black} Technical Specification } \\[0.5cm]
-            {\Huge \bfseries \color{black} of Containerized Diesel Generator} \\[0.5cm]
-            {\Huge \bfseries \color{black} DCP3000kW} \\[0.5cm]
+            {\Huge \bfseries \color{black} First Attempt } \\[0.5cm]
+            {\Huge \bfseries \color{black} from Frank} \\[0.5cm]
+            {\Huge \bfseries \color{black} 26/09/30 before holiday} \\[0.5cm]
 
             \vfill
 
