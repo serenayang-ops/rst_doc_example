@@ -21,6 +21,14 @@ General Provisions
 
 Refer to :numref:`fig_example1`.
 
+.. _fig_gigapod:
+
+.. figure:: figs/logo.pdf
+   :scale: 50 %
+
+   This is the giga pod
+
+Refer to :numref:`fig_gigapod`.
 
 .. list-table:: Outer Table Caption
    :widths: 50 50
